@@ -160,6 +160,11 @@ img {
     position: relative;
     color: var(--brend-color);
 }
+
+.navigtion-link.current:hover,
+.navigtion-link.current:focus {
+    color: var(--brend-color);
+}
 .navigtion-link.current::after {
     position: absolute;
     content: "";
@@ -209,7 +214,7 @@ img {
     
     padding-top: 32px;
     padding-bottom: 32px;
-    transition: transform var(--slow-anim), var(--fost-anim);
+    transition: color var(--slow-anim) var(--fost-anim);
 }
 
 .group-tel {
@@ -223,7 +228,7 @@ img {
     text-decoration: none;
     padding-top: 32px;
     padding-bottom: 32px;
-    transition: transform var(--slow-anim), var(--fost-anim);
+    transition: color var(--slow-anim) var(--fost-anim);
 }  
 .navigtion-link:hover,
 .navigtion-link:focus,
@@ -287,7 +292,7 @@ img {
     padding-bottom: 10px;  
     border-radius: 4px;
     cursor: pointer;
-    transition: transform var(--slow-anim), var(--fost-anim);
+    transition: background-color var(--slow-anim) var(--fost-anim);
 }
 .hero-navigtion:focus,
 .hero-navigtion:active, 
@@ -303,7 +308,7 @@ img {
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
     z-index: 10;
-    transition: opacity var(--slow-anim), visibility var(--fost-anim);
+    transition: opacity 2050ms, visibility 2050ms var(--fost-anim);
 
 }
 .backdrop.is-hidden {
@@ -315,7 +320,7 @@ img {
     position: absolute;
     top: 50%;
     left: 50%;
-    /* transform: translate(-50%, -50%); */
+    transform: translate(-50%, -50%) scale(0); 
     min-width: 528px;
     min-height: 581px;
     background-color: #FFFFFF;
@@ -546,7 +551,8 @@ img {
     background-color:#FFFFFF;
 
     border-radius: 50%;
-    transition: transform var(--slow-anim), var(--fost-anim);
+    transition: color var(--slow-anim) var(--fost-anim),
+     background-color var(--slow-anim) var(--fost-anim) ;
 }
 
 .socials-icons {
@@ -596,7 +602,7 @@ img {
     color: #212121;
     padding-top: 0;
     margin-bottom: 50px;
-    transition: transform var(--slow-anim), var(--fost-anim);
+    transition: border var(--slow-anim), var(--fost-anim);
 }
 .permanent-clients-icons {
     display: flex;
@@ -606,7 +612,8 @@ img {
     height: 92px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
-    transition: transform var(--slow-anim), var(--fost-anim);
+    transition: color var(--slow-anim) var(--fost-anim),
+     border-color var(--slow-anim) var(--fost-anim);
     
 }
 /* .going-permanent-clients {
@@ -673,7 +680,7 @@ img {
     letter-spacing: 0.03em;
     color: #ffffff99;
     text-decoration: none;
-    transition: transform var(--slow-anim), var(--fost-anim);
+    transition: color var(--slow-anim), var(--fost-anim);
 }
 
 .group-mailto-footer:hover,
@@ -717,7 +724,7 @@ img {
     height: 44px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    transition: transform var(--slow-anim), var(--fost-anim);
+    transition: color var(--slow-anim), var(--fost-anim);
 }
 .socials-link-footer:hover,
 .socials-link-footer:focus {
@@ -804,7 +811,7 @@ img {
     margin-top: 0;
     margin-bottom: 0;
     margin-right: 8px;
-    transition: transform var(--slow-anim);
+    transition: box-shadow var(--slow-anim);
 }
 .filter-item:hover,
 .filter-item:focus {
@@ -842,9 +849,10 @@ img {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+    transition: box-shadow var(--slow-anim) var(--fost-anim);
 }
 .portfolio-list:hover .blok-insert {
-    transition: ;
+    transition: box-shadow var(--slow-anim) var(--fost-anim);
 }
 .sending {
     text-decoration: none;
